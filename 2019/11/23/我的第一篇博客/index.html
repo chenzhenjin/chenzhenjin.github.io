@@ -15,7 +15,10 @@
 <meta property="og:description" content="初始化hexo1hexo init 启动hexo1hexo s 新建一篇博客1hexo n 我的第一篇博客 打开新建的博客md文件 找到source-&amp;gt;_posts 把该文件夹放在hbuilder 用markdown语法书写放置本地图片 在hexo的source目录下新建一个pic或者你喜欢的名称目录1![&amp;apos;图片描述&amp;apos;](&#x2F;pic&#x2F;图片名称.jpg) 重新整理blog12">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;pic&#x2F;%E5%9B%BE%E7%89%87%E6%94%BE%E7%BD%AE%E7%9B%AE%E5%BD%95.jpg">
-<meta property="og:updated_time" content="2019-11-23T15:33:56.563Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;pic&#x2F;%E4%BB%93%E5%BA%93%E5%91%BD%E5%90%8D.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;pic&#x2F;github-http.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;pic&#x2F;config.yml.jpg">
+<meta property="og:updated_time" content="2019-11-23T16:49:14.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;pic&#x2F;%E5%9B%BE%E7%89%87%E6%94%BE%E7%BD%AE%E7%9B%AE%E5%BD%95.jpg">
   
@@ -95,14 +98,30 @@
 <li>用markdown语法书写<h3 id="放置本地图片"><a href="#放置本地图片" class="headerlink" title="放置本地图片"></a>放置本地图片</h3></li>
 <li>在hexo的source目录下新建一个pic或者你喜欢的名称目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![&apos;图片描述&apos;](/pic/图片名称.jpg)</span><br></pre></td></tr></table></figure>
 <img src="/pic/%E5%9B%BE%E7%89%87%E6%94%BE%E7%BD%AE%E7%9B%AE%E5%BD%95.jpg" alt="&#39;图片放置目录&#39;"><h3 id="重新整理blog"><a href="#重新整理blog" class="headerlink" title="重新整理blog"></a>重新整理blog</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清除文章</span><br><span class="line">hexo g  //重新生成</span><br></pre></td></tr></table></figure>
-
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3></li>
+<li>在new repository 的命名是账号名.github.io<br><img src="/pic/%E4%BB%93%E5%BA%93%E5%91%BD%E5%90%8D.jpg" alt="&#39;仓库命名&#39;"></li>
+<li>在hexo-blog下安装hexo-deployer-git  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>修改_config.yml<ul>
+<li>找到最后的type<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type:git</span><br><span class="line">repo:https://github.com/.../....github.io.git //你的http的git链接</span><br><span class="line">branch:master</span><br><span class="line">        记得换行,不然报错</span><br></pre></td></tr></table></figure>
+<img src="/pic/github-http.jpg" alt="&#39;github-http&#39;"></li>
+</ul>
+</li>
+</ul>
+<p><img src="/pic/config.yml.jpg" alt="&#39;config.yml&#39;"></p>
+<ul>
+<li>执行发布命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="改主题"><a href="#改主题" class="headerlink" title="改主题"></a>改主题</h3><ul>
+<li>浏览器url输入github.com/litten/hexo-theme-yilia观看</li>
+<li>下载主题<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia themes/yilia</span><br></pre></td></tr></table></figure></li>
+<li>再次修改_config.yml找到theme<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme:yilia</span><br></pre></td></tr></table></figure></li>
+</ul>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ck3bsln5w0001rsqrgaakg7h6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ck3bt9dqf0001fwqrb4dkajqc" class="article-share-link">Share</a>
       
       
     </footer>
